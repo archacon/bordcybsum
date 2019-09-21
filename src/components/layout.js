@@ -9,7 +9,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import TitleBar from "./titlebar";
+import EventDetailsBar from "./event-details-bar";
+import TitleBar from "./title-bar";
+import SpeakersBar from "./speakers-bar";
 import Header from "./header";
 import "./layout.css";
 
@@ -28,6 +30,8 @@ const Layout = ({ children }) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <TitleBar></TitleBar>
+      <SpeakersBar></SpeakersBar>
+      <EventDetailsBar></EventDetailsBar>
       <div
         style={{
           margin: `0 auto`,
