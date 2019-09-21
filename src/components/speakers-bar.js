@@ -1,42 +1,84 @@
 import React from 'react'
 import { Container, Col, Row, Card, CardTitle, CardText } from 'reactstrap'
+import faker from 'faker'
+import SpeakerCard from './speaker-card'
+
+// replace fake data with graphql info
+const speakerList = [
+  {
+    src: faker.image.avatar(),
+    firstName: faker.name.firstName(),
+    middleInitial: '',
+    lastName: faker.name.lastName(),
+    company: faker.company.companyName(),
+    title: faker.name.title()
+  },
+  {
+    src: faker.image.avatar(),
+    firstName: faker.name.firstName(),
+    middleInitial: '',
+    lastName: faker.name.lastName(),
+    company: faker.company.companyName(),
+    title: faker.name.title()
+  },
+  {
+    src: faker.image.avatar(),
+    firstName: faker.name.firstName(),
+    middleInitial: '',
+    lastName: faker.name.lastName(),
+    company: faker.company.companyName(),
+    title: faker.name.title()
+  },
+  {
+    src: faker.image.avatar(),
+    firstName: faker.name.firstName(),
+    middleInitial: '',
+    lastName: faker.name.lastName(),
+    company: faker.company.companyName(),
+    title: faker.name.title()
+  },
+  {
+    src: faker.image.avatar(),
+    firstName: faker.name.firstName(),
+    middleInitial: '',
+    lastName: faker.name.lastName(),
+    company: faker.company.companyName(),
+    title: faker.name.title()
+  },
+  {
+    src: faker.image.avatar(),
+    firstName: faker.name.firstName(),
+    middleInitial: '',
+    lastName: faker.name.lastName(),
+    company: faker.company.companyName(),
+    title: faker.name.title()
+  }
+]
 
 export default () => (
   <Container>
-    <h2 id='enticetitle' className='text-center my-5'>
+    <h2 id='enticetitle' className='text-center'>
       Speakers
     </h2>
     <Row id='enticecontainer'>
-      <Col sm='4' className='mb-3'>
-        <Card
-          body
-          inverse
-          style={{ backgroundColor: '#333', borderColor: '#333' }}
-        >
-          <CardTitle>Speaker 1</CardTitle>
-          <CardText />
-        </Card>
-      </Col>
-      <Col sm='4' className='mb-3'>
-        <Card
-          body
-          inverse
-          style={{ backgroundColor: '#333', borderColor: '#333' }}
-        >
-          <CardTitle>Speaker 2</CardTitle>
-          <CardText />
-        </Card>
-      </Col>
-      <Col sm='4' className='mb-3'>
-        <Card
-          body
-          inverse
-          style={{ backgroundColor: '#333', borderColor: '#333' }}
-        >
-          <CardTitle>Speaker 3</CardTitle>
-          <CardText />
-        </Card>
-      </Col>
+      {speakerList.map(speaker => {
+        return (
+          <Col xs='4'>
+            <SpeakerCard
+              src={speaker.src}
+              name={
+                speaker.firstName +
+                ' ' +
+                speaker.middleInitial +
+                ' ' +
+                speaker.lastName
+              }
+              company={speaker.company}
+              title={speaker.title}
+            />
+          </Col>
+        )
+      })}
     </Row>
   </Container>
 )

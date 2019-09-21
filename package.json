@@ -19,6 +19,7 @@
     "react-dom": "^16.9.0"
   },
   "devDependencies": {
+    "faker": "^4.1.0",
     "font-awesome": "^4.7.0",
     "gatsby-link": "^2.2.15",
     "prettier": "^1.18.2",
