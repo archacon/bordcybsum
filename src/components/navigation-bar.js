@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { Nav, NavItem } from 'reactstrap'
+import Link from 'gatsby-link'
 
-export default () => (
+export default props => (
   <Nav id='menu' navbar className='mx-auto'>
     <NavItem
       style={{
