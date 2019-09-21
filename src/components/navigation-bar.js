@@ -1,48 +1,61 @@
 import React, { Component } from 'react'
-import { Nav, NavItem } from 'reactstrap'
-import Link from 'gatsby-link'
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from 'reactstrap'
 
-export default props => (
-  <Nav id='menu' navbar className='mx-auto'>
-    <NavItem
-      style={{
-        textAlign: 'center',
-        marginBottom: '2px'
-      }}
-      className={`col-md-6 col-xs-10 ${
-        props.activeTabClassName === 'home' ? 'active' : ''
-      }`}
-    >
-      <Link className='nav-link' to='/'>
-        Home
-      </Link>
-    </NavItem>
-    <NavItem
-      style={{
-        textAlign: 'center',
-        marginBottom: '2px'
-      }}
-      className={`col-md-6  ${
-        props.activeTabClassName === 'faq' ? 'active' : ''
-      }`}
-    >
-      <Link className='nav-link' to='/faq'>
-        FAQ
-      </Link>
-    </NavItem>
-    <NavItem
-      style={{
-        textAlign: 'center',
+const links = [
+  { href: '#home', text: 'Home' },
+  { href: '#speakers', text: 'Speakers' },
+  { href: '#details', text: 'Event Details' },
+  { href: '#register', text: 'Register' },
+  { href: '#sponsors', text: 'Sponsors' },
+  { href: '#About Us', text: 'About Us' }
+]
 
-        marginBottom: '2px'
-      }}
-      className={`col-md-6 ${
-        props.activeTabClassName === 'contact' ? 'active' : ''
-      }`}
-    >
-      <Link className='nav-link' to='/contact'>
-        Contact
-      </Link>
-    </NavItem>
-  </Nav>
+const createNavItem = ({ href, text, className }) => (
+  <NavItem>
+    <NavLink href={href} className={className}>
+      {text}
+    </NavLink>
+  </NavItem>
 )
+
+export default class Example extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      isOpen: false
+    }
+
+    this.toggle = this.toggle.bind(this)
+  }
+
+  toggle () {
+    this.setState({
+      isOpen: !this.state.isOpen
+    })
+  }
+
+  render () {
+    return (
+      <div>
+        <Navbar color='light' light expand='md'>
+          <NavbarBrand href='/'>Borderland Cyber Summit</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav className='ml-auto' navbar>
+              {links.map(createNavItem)}
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    )
+  }
+}
