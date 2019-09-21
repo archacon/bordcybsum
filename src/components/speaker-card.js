@@ -11,7 +11,7 @@ import {
 export default props => {
   return (
     <div>
-      <Card>
+      <Card className='speaker-card'>
         <CardImg top width='100%' src={props.src} alt='Card image cap' />
         <CardBody>
           <CardTitle>
@@ -21,10 +21,7 @@ export default props => {
             <h5>{props.company}</h5>
             <b>{props.title}</b>
           </CardSubtitle>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </CardText>
+          <CardText>{props.blurb}</CardText>
         </CardBody>
       </Card>
     </div>

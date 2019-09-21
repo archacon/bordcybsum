@@ -11,7 +11,8 @@ const speakerList = [
     middleInitial: '',
     lastName: faker.name.lastName(),
     company: faker.company.companyName(),
-    title: faker.name.title()
+    title: faker.name.title(),
+    blurb: faker.lorem.sentences()
   },
   {
     src: faker.image.avatar(),
@@ -19,7 +20,8 @@ const speakerList = [
     middleInitial: '',
     lastName: faker.name.lastName(),
     company: faker.company.companyName(),
-    title: faker.name.title()
+    title: faker.name.title(),
+    blurb: faker.lorem.sentences()
   },
   {
     src: faker.image.avatar(),
@@ -27,7 +29,8 @@ const speakerList = [
     middleInitial: '',
     lastName: faker.name.lastName(),
     company: faker.company.companyName(),
-    title: faker.name.title()
+    title: faker.name.title(),
+    blurb: faker.lorem.sentences()
   },
   {
     src: faker.image.avatar(),
@@ -35,7 +38,8 @@ const speakerList = [
     middleInitial: '',
     lastName: faker.name.lastName(),
     company: faker.company.companyName(),
-    title: faker.name.title()
+    title: faker.name.title(),
+    blurb: faker.lorem.sentences()
   },
   {
     src: faker.image.avatar(),
@@ -43,7 +47,8 @@ const speakerList = [
     middleInitial: '',
     lastName: faker.name.lastName(),
     company: faker.company.companyName(),
-    title: faker.name.title()
+    title: faker.name.title(),
+    blurb: faker.lorem.sentences()
   },
   {
     src: faker.image.avatar(),
@@ -51,7 +56,8 @@ const speakerList = [
     middleInitial: '',
     lastName: faker.name.lastName(),
     company: faker.company.companyName(),
-    title: faker.name.title()
+    title: faker.name.title(),
+    blurb: faker.lorem.sentences()
   }
 ]
 
@@ -75,6 +81,7 @@ export default () => (
               }
               company={speaker.company}
               title={speaker.title}
+              blurb={speaker.blurb}
             />
           </Col>
         )
