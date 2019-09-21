@@ -4,22 +4,17 @@ import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 class RegistrationForm extends Component {
   render () {
     return (
-      <div className='col-8 mx-auto'>
-        <Form
-          id='registrationform'
-          className='my-5 mx-auto col-auto'
-          action=''
-          method='POST'
-        >
+      <div className='col-12'>
+        <Form id='registrationform' className='' action='' method='POST'>
           <FormGroup row>
             <Label
-              for='FirstName'
+              for='firstName'
               sm={{ size: 2, offset: 2 }}
               textAlign='right'
             >
               Name
             </Label>
-            <Col sm={{ size: 3 }}>
+            <Col sm={3}>
               <Input
                 type='text'
                 name='firstName'

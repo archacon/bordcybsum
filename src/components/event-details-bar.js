@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import faker from 'faker'
 
 import RegistrationForm from './registration-form'
 
@@ -7,8 +8,15 @@ class EventDetailsBar extends Component {
   render () {
     return (
       <div className='col-8 mx-auto'>
-        <h2 className='text-center mb-4'>Form Title</h2>
-        <RegistrationForm />
+        <Row>
+          <Col>
+            <p>{faker.lorem.paragraphs()}</p>
+          </Col>
+          <Col lg='6' sm='12'>
+            <h2 className='text-center mb-4'>Form Title</h2>
+            <RegistrationForm />
+          </Col>
+        </Row>
       </div>
     )
   }

@@ -18,7 +18,7 @@ export default props => {
             <h3>{props.name}</h3>
           </CardTitle>
           <CardSubtitle>
-            <h5>{props.company}</h5>
+            <h6>{props.company}</h6>
             <b>{props.title}</b>
           </CardSubtitle>
           <CardText>{props.blurb}</CardText>
