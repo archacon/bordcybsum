@@ -9,7 +9,7 @@ class SiteFooter extends Component {
           <Container>
             <NavbarBrand>Footer</NavbarBrand>
             <p style={{ color: 'white' }}>
-              <i class='fa fa-linkedin-in' />
+              <i className='fa fa-linkedin-in' />
             </p>
           </Container>
         </Navbar>

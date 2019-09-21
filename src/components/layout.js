@@ -10,10 +10,6 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 
-import EventDetailsBar from "./event-details-bar";
-import TitleBar from "./title-bar";
-import SpeakersBar from "./speakers-bar";
-import Header from "./header";
 import SiteFooter from "./site-footer";
 import "./layout.css";
 
@@ -68,26 +64,9 @@ const Layout = ({ children }) => {
         />
         <meta name="twitter:image" content={data.site.siteMetadata.imageurl} />
       </Helmet>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <TitleBar></TitleBar>
-      <SpeakersBar></SpeakersBar>
-      <EventDetailsBar></EventDetailsBar>
-      <SiteFooter></SiteFooter>
-      {/* <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div> */}
+      <div>{children}</div>
+
+      <SiteFooter />
     </>
   );
 };
