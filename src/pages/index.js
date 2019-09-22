@@ -12,6 +12,7 @@ import Header from '../components/header'
 import SiteFooter from '../components/site-footer'
 import ParallaxBar from '../components/parallax-bar'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+import '../components/App.css'
 
 const IndexPage = () => (
   <Layout>

@@ -1,0 +1,49 @@
+@font-face {
+font-family: 'MadHacker';
+src: url('../fonts/Mad Hacker.ttf') format('truetype');
+}
+.nav-bar{
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  opacity: 0.7;
+  width: 100%;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  transition: top 0.6s;
+}
+.navbar--hidden {
+  top: -80px;
+}
+.navbar-light .navbar-brand{
+  color: white;
+}
+.navbar-brand{
+  font-size: 30px;
+  font-family: MadHacker;
+  font-style: normal;
+}
+a {
+  color: white;
+  font-style: italic;
+  font-weight: 400;
+}
+.h1, h1{
+  font-size: 4rem;
+  font-family: Roboto;
+}
+body {
+  background: #ADA996;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.jumbotron{
+  color: White;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  margin-top: -1.5rem;
+  background-image: url('../images/el-paso-nightscape-2.jpg');
+}
