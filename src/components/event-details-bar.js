@@ -13,7 +13,7 @@ class EventDetailsBar extends Component {
             <p>{faker.lorem.paragraphs()}</p>
           </Col>
           <Col lg='6' sm='12'>
-            <h2 className='text-center mb-4'>Form Title</h2>
+            <h2 id='formtitle' className='text-center mb-4'>Form Title</h2>
             <RegistrationForm />
           </Col>
         </Row>

@@ -3,7 +3,7 @@ import faker from 'faker'
 
 const AboutUs = () => {
   return (
-    <div>
+    <div id='aboutus'>
       <p>{faker.lorem.paragraphs()}</p>
     </div>
   )
