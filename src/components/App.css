@@ -28,22 +28,41 @@ src: url('../fonts/Mad Hacker.ttf') format('truetype');
   font-family: MadHacker;
   font-style: normal;
 }
-a {
+.nav-link a {
+  float: left;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
   color: white;
   font-style: italic;
   font-weight: 400;
+}
+.nav-link a:hover {
+  border-bottom: 3px solid yellow;
 }
 .h1, h1{
   font-size: 3rem;
   font-family: Roboto;
 }
-.btn-group-lg>.btn, .btn-lg{
-
-}
 body {
   background: #ADA996;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.margin-left{
+  margin-left:25px !important;
+}
+.jumbotext p{
+  padding: center;
+}
+.jumbobuttons{
+  margin-left: 380px;
+}
+.jumbotron, h1 {
+  padding-right: 200px;
+  padding-top: 200px;
 }
 .jumbotron{
   color: White;
