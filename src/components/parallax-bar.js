@@ -1,10 +1,18 @@
 import React, { Component } from 'react'
+import { Container } from 'reactstrap'
 import { StaticQuery, graphql } from 'gatsby'
+import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import Img from 'gatsby-image'
 
 class ParallaxBar extends Component {
   constructor (props) {
     super(props)
+  }
+
+  getIndex () {
+    console.log('getting  index')
+    console.log(this.props.index ? this.props.indes : 0)
+    return this.props.index ? this.props.index : 0
   }
 
   render () {
@@ -21,7 +29,7 @@ class ParallaxBar extends Component {
               edges {
                 node {
                   childImageSharp {
-                    fluid(maxWidth: 600, maxHeight: 400) {
+                    fluid(maxWidth: 240, maxHeight: 160) {
                       ...GatsbyImageSharpFluid
                     }
                   }
@@ -30,7 +38,25 @@ class ParallaxBar extends Component {
             }
           }
         `}
-        render={data => <div />}
+        render={data => (
+          <Container className='py-5'>
+            <Parallax pages={1} scrolling={false}>
+              <ParallaxLayer offset={0} speed={-0.3}>
+                <Img
+                  fluid={
+                    data.allFile.edges[this.getIndex()].node.childImageSharp
+                      .fluid
+                  }
+                />
+              </ParallaxLayer>
+              {/* <ParallaxLayer
+                offset={0}
+                speed={1}
+                style={{ backgroundColor: '#000000' }}
+              /> */}
+            </Parallax>
+          </Container>
+        )}
       />
     )
   }
