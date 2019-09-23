@@ -14,9 +14,6 @@ import {
   Scroll
 } from 'react-scroll';
 
- // <NavLink tag={Link} to="/somewhere">
-
-
  const links = [
    { href: '#home', text: 'Home', to: 'head' },
    { href: '#speakers', text: 'Speakers', to: 'enticetitle' },
@@ -42,8 +39,6 @@ import {
      </NavLink>
    </NavItem>
  )
-
-
 
 export default class Example extends Component {
   constructor (props) {
