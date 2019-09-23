@@ -2,6 +2,16 @@
 font-family: 'MadHacker';
 src: url('../fonts/Mad Hacker.ttf') format('truetype');
 }
+@media screen and (min-width: 601px) {
+  .navbar-brand {
+    font-size: 200%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .navbar-brand {
+    font-size: 120%;
+  }
+}
 .nav-bar{
   background: #0F2027;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
@@ -18,7 +28,6 @@ src: url('../fonts/Mad Hacker.ttf') format('truetype');
   top: -13%;
 }
 .navbar-brand{
-  font-size: 100%;
   background: -webkit-linear-gradient(#eee, #333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
