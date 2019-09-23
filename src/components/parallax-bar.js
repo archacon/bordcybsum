@@ -10,8 +10,6 @@ class ParallaxBar extends Component {
   }
 
   getIndex () {
-    console.log('getting  index')
-    console.log(this.props.index ? this.props.indes : 0)
     return this.props.index ? this.props.index : 0
   }
 

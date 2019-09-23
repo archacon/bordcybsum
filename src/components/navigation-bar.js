@@ -24,17 +24,9 @@ const links = [
 
 const createNavItem = ({ href, text, to, className }) => (
   <NavItem>
-    <NavLink>
-      <Link
-        to={to}
-        className={className}
-        activeClass="active"
-        smooth={true}
-        offset={-27}
-      >
-        {text}
-      </Link>
-    </NavLink>
+    <Link to={to} activeClass="active" smooth={true} offset={-27}>
+      {text}
+    </Link>
   </NavItem>
 );
 
