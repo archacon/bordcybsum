@@ -17,8 +17,8 @@ import {
  const links = [
    { href: '#home', text: 'Home', to: 'head' },
    { href: '#speakers', text: 'Speakers', to: 'enticetitle' },
-   { href: '#details', text: 'Event Details', to: 'formtitle' },
-   { href: '#register', text: 'Register', to: 'formtitle' },
+   { href: '#details', text: 'Event Details', to: 'card-side side-front' },
+   { href: '#register', text: 'Register', to: 'card-side side-front' },
    { href: '#sponsors', text: 'Sponsors' },
    { href: '#About Us', text: 'About Us', to: 'aboutus' }
  ]

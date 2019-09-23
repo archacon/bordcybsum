@@ -4,7 +4,8 @@ import faker from 'faker'
 
 import RegistrationForm from './registration-form'
 
-class EventDetailsBar extends Component {
+//Original Design by Adrain
+/* class EventDetailsBar extends Component {
   render () {
     return (
       <div className='col-8 mx-auto'>
@@ -14,6 +15,22 @@ class EventDetailsBar extends Component {
           </Col>
           <Col lg='6' sm='12'>
             <h2 id='formtitle' className='text-center mb-4'>Form Title</h2>
+            <RegistrationForm />
+          </Col>
+        </Row>
+      </div>
+    )
+  }
+} */
+
+
+//Flip card design by Eddy
+class EventDetailsBar extends Component {
+  render () {
+    return (
+      <div className='col-8 mx-auto'>
+        <Row>
+          <Col>
             <RegistrationForm />
           </Col>
         </Row>
