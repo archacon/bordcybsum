@@ -10,11 +10,7 @@ import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
       <div className='col-12'>
         <Form id='registrationform' className='' action='' method='POST'>
           <FormGroup row>
-            <Label
-              for='firstName'
-              sm={{ size: 2, offset: 2 }}
-              textAlign='right'
-            >
+            <Label for='firstName' sm={{ size: 2, offset: 2 }}>
               Name
             </Label>
             <Col sm={3}>
