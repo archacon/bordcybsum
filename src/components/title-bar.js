@@ -11,7 +11,7 @@ class TitleBar extends Component {
     return (
       <Jumbotron class='jumbotron jumbotron-fluid' id='jumbo'>
         <div class='container'>
-          <h1 class="display-2">Borderland Cyber Summit 2019</h1>
+          <h1 class="display-2">Border land Cyber Summit 2019</h1>
             <p class='lead'>Some more information</p>
             <p>
               <Link class="btn btn-outline-danger btn-lg margin-right" href="#" role="button" to='formtitle' activeClass= 'active'
