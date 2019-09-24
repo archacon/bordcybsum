@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 import faker from 'faker'
+import FormModal from './form-modal'
 
 import RegistrationForm from './registration-form'
 
-//Original Design by Adrain
+// Original Design by Adrain
 /* class EventDetailsBar extends Component {
   render () {
     return (
@@ -23,15 +24,14 @@ import RegistrationForm from './registration-form'
   }
 } */
 
-
-//Flip card design by Eddy
+// Flip card design by Eddy
 class EventDetailsBar extends Component {
   render () {
     return (
       <div className='col-8 mx-auto'>
         <Row>
           <Col>
-            <RegistrationForm />
+            <FormModal />
           </Col>
         </Row>
       </div>

@@ -686,6 +686,19 @@ label em {
 }
 
 /* begin custom code  */
+
+#registrationform {
+  font-size: 0.8vw;
+}
+#registrationform h1 {
+  font-size: 2vw;
+  text-align: center;
+}
+#registrationform h2 {
+  font-size: 1vw;
+  font-weight: bold;
+}
+
 form {
   margin: 0 auto;
   width: 80%;
@@ -753,3 +766,23 @@ label em {
 .checkbox-col + .checkbox-col {
   margin-top: 0;
 }
+
+/****************MODAL*********************/
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 1000ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.ReactModal__Body--open {
+  overflow-y: hidden;
+}
+
+/****************END MODAL******************/

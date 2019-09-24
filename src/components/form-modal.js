@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import Modal from 'react-modal'
 import RegistrationForm from './registration-form'
+import { relative } from 'path'
 
 const customStyles = {
   content: {
@@ -10,7 +11,9 @@ const customStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-20%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    height: '500px', // <-- This sets the height,
+    overlfow: 'scroll' // <-- This tells the modal to scrol
   }
 }
 
@@ -35,7 +38,6 @@ export default class FormModal extends React.Component {
 
   afterOpenModal () {
     // references are now sync'd and can be accessed.
-    this.subtitle.style.color = '#f00'
   }
 
   closeModal () {
@@ -45,19 +47,28 @@ export default class FormModal extends React.Component {
   render () {
     return (
       <div>
-        <button onClick={this.openModal}>Open Modal</button>
+        <button
+          className='btn btn-outline-danger btn-lg margin-right'
+          onClick={this.openModal}
+        >
+          Register Now
+        </button>
         <Modal
           isOpen={this.state.modalIsOpen}
           onAfterOpen={this.afterOpenModal}
           onRequestClose={this.closeModal}
           style={customStyles}
           contentLabel='Registration Modal'
-          className='col-8'
         >
-          <h2 ref={subtitle => (this.subtitle = subtitle)}>Hello</h2>
-          <button onClick={this.closeModal}>close</button>
-          <div>I am a modal</div>
-          <RegistrationForm />
+          <RegistrationForm>
+            <button
+              style={{ float: 'right' }}
+              onClick={this.closeModal}
+              className='btn btn-default'
+            >
+              <i className='fa fa-window-close' />
+            </button>
+          </RegistrationForm>
         </Modal>
       </div>
     )

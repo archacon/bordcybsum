@@ -68,7 +68,8 @@ class RegistrationForm extends Component {
   render () {
     return (
       <Form id='registrationform' className='' action='' method='POST'>
-        <h1>BORDERLAND CYBFR SECURITY SUMMIT 2019</h1>
+        {this.props.children}
+        <h1>BORDERLAND CYBER SECURITY SUMMIT 2019</h1>
         <h1>REGISTRATION FORM</h1>
 
         <h3>Personal Information</h3>
@@ -161,7 +162,7 @@ class RegistrationForm extends Component {
         <h2>Contact Information Release & Model Release???</h2>
         {agreementQuestions.map(generateCheckboxes)}
         <FormGroup>
-          <Button type='submit' color='primary' className='offset-sm-2'>
+          <Button type='submit' color='primary' className=''>
             Submit
           </Button>
         </FormGroup>
