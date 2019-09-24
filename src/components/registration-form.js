@@ -1,5 +1,68 @@
 import React, { Component } from 'react'
-import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import {
+  Col,
+  Row,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Container
+} from 'reactstrap'
+
+const agreementQuestions = [
+  {
+    name: 'q1',
+    text:
+      'I agree to the contact information and model release of my name and photographic likeness to West Texas Cybersecurity and Information Assurance Society of the event for the its future and legal multimedia activities'
+  },
+  {
+    name: 'q2',
+    text:
+      'Would you like to receive an attendance certification for CEU or CPE?'
+  },
+  {
+    name: 'q3',
+    text:
+      'Would you like to become a member of West Texas Cybersecurity and Information Assurance Society’s nonprofit organization?'
+  },
+  {
+    name: 'q4',
+    text:
+      'Would you like to donate to West Texas Cybersecurity and Information Assurance Society’s Community Outreach programs? (All donations are tax deductible)'
+  },
+  {
+    name: 'q5',
+    text:
+      'Would you like to be a future event sponsor? (Monthly meetings, future conferences, outreach programs, and summits)'
+  }
+]
+
+const generateCheckboxes = ({ name, text }) => (
+  <FormGroup check>
+    <Row>
+      <Col md={{ size: 1 }} className='checkbox-col'>
+        <FormGroup check>
+          <Label check>
+            <Input type='radio' name={name} />
+            yes
+          </Label>
+        </FormGroup>
+      </Col>
+      <Col md={{ size: 1 }} className='checkbox-col'>
+        <FormGroup check>
+          <Label check>
+            <Input type='radio' name={name} />
+            no
+          </Label>
+        </FormGroup>
+      </Col>
+      <Col md={{ size: 10 }} className='checkbox-col'>
+        <Label>{text}</Label>
+      </Col>
+    </Row>
+  </FormGroup>
+)
 
 class RegistrationForm extends Component {
   render () {
@@ -9,140 +72,94 @@ class RegistrationForm extends Component {
         <h1>REGISTRATION FORM</h1>
 
         <h3>Personal Information</h3>
-        <FormGroup row>
-          <Label for='firstName' sm={{ size: 2, offset: 2 }}>
-            Name
-          </Label>
-          <Col sm={3}>
-            <Input
-              type='text'
-              name='firstName'
-              id='firstName'
-              placeholder='First'
-            />
-          </Col>
-          <Col sm={3}>
-            <Input
-              type='text'
-              name='lastName'
-              id='lastName'
-              placeholder='Last'
-            />
-          </Col>
+        <FormGroup>
+          <Label for='firstName'>Name</Label>
+          <Input
+            type='text'
+            name='firstName'
+            id='firstName'
+            placeholder='First'
+          />
+          <Input type='text' name='lastName' id='lastName' placeholder='Last' />
         </FormGroup>
-        <FormGroup row>
-          <Label for='exampleEmail' sm={{ size: 2, offset: 2 }}>
-            Email Address:
-          </Label>
-          <Col sm={6}>
-            <Input
-              type='email'
-              name='email'
-              id='exampleEmail'
-              placeholder='example@domain.com'
-            />
-          </Col>
+        <FormGroup>
+          <Label for='exampleEmail'>Email Address:</Label>
+          <Input
+            type='email'
+            name='email'
+            id='exampleEmail'
+            placeholder='example@domain.com'
+          />
         </FormGroup>
-        <FormGroup row>
-          <Label for='phoneNumber' sm={{ size: 2, offset: 2 }}>
-            Cell Phone:
-          </Label>
-          <Col sm={6}>
-            <Input type='tel' name='phoneNumber' id='phoneNumber' />
-          </Col>
+        <FormGroup>
+          <Label for='phoneNumber'>Cell Phone:</Label>
+          <Input type='tel' name='phoneNumber' id='phoneNumber' />
         </FormGroup>
         <h2>Badge Information</h2>
-        <FormGroup row>
-          <Label for='badgeName' sm={{ size: 2, offset: 2 }}>
-            BadgeName
-          </Label>
-          <Col sm={6}>
-            <Input type='text' name='badgeName' id='badgeName' />
-          </Col>
+        <FormGroup>
+          <Label for='badgeName'>BadgeName</Label>
+          <Input type='text' name='badgeName' id='badgeName' />
         </FormGroup>
-        <FormGroup row>
-          <Label for='company' sm={{ size: 2, offset: 2 }}>
-            Company/School/Organization Name:
-          </Label>
-          <Col sm={6}>
-            <Input type='text' name='company' id='company' />
-          </Col>
+        <FormGroup>
+          <Label for='company'>Company/School/Organization Name:</Label>
+          <Input type='text' name='company' id='company' />
         </FormGroup>
-        <FormGroup row>
-          <Label for='jobTitle' sm={{ size: 2, offset: 2 }}>
-            Job Title:
-          </Label>
-          <Col sm={6}>
-            <Input type='text' name='jobTitle' id='jobTitle' />
-          </Col>
+        <FormGroup>
+          <Label for='jobTitle'>Job Title:</Label>
+          <Input type='text' name='jobTitle' id='jobTitle' />
         </FormGroup>
-        <FormGroup tag='fieldset' row>
-          <legend className='col-form-label col-sm-2'>
-            <h1>How did you hear about this event?</h1>
-          </legend>
-          <Col sm={10}>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />
-                Email advertising
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />
-                Another event or trade show
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />
-                Social media
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />
-                Word of mouth
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />I was invited by a speaker
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' d />I am participating as a
-                speaker
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />
-                Event website
-              </Label>
-            </FormGroup>
-            <FormGroup check>
-              <Label check>
-                <Input type='radio' name='radio' />
-                Other
-              </Label>
-            </FormGroup>
-          </Col>
+        <h2>How did you hear about this event?</h2>
+        <FormGroup tag='fieldset'>
+          <legend className='col-form-label col-sm-2' />
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Email advertising
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Another event or trade show
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Social media
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Word of mouth
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />I was invited by a speaker
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />I am participating as a speaker
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Event website
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Other
+            </Label>
+          </FormGroup>
         </FormGroup>
-        <FormGroup check>
-          <legend className='col-form-label col-sm-2'>
-            Contact Information Release & Model Release???
-          </legend>
-          <Label check>
-            <Input type='radio' id='yes' name='checkbox' />
-            yes
-          </Label>
-          <Label check>
-            <Input type='radio' id='no' name='checkbox2' />
-            no
-          </Label>
-        </FormGroup>
+        <h2>Contact Information Release & Model Release???</h2>
+        {agreementQuestions.map(generateCheckboxes)}
         <FormGroup>
           <Button type='submit' color='primary' className='offset-sm-2'>
             Submit

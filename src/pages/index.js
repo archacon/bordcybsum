@@ -20,18 +20,17 @@ import '../components/App.css'
 import RegistrationForm from '../components/registration-form'
 
 const IndexPage = () => (
-  <RegistrationForm />
-  // <Layout my={5}>
-  //   <Header />
+  <Layout my={5}>
+    <Header />
 
-  //   <TitleBar />
-  //   <ParallaxBar index={0} />
-  //   <FormModal />
-  //   <SpeakersBar />
-  //   <EventDetailsBar />
-  //   <AboutUs />
-  //   <div style={{ marginBottom: '5em' }} />
-  // </Layout>
+    <TitleBar />
+    <ParallaxBar index={0} />
+    <FormModal />
+    <SpeakersBar />
+    <EventDetailsBar />
+    <AboutUs />
+    <div style={{ marginBottom: '5em' }} />
+  </Layout>
 )
 
 export default IndexPage
