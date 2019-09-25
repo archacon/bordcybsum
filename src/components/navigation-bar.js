@@ -35,7 +35,7 @@ export default class Example extends Component {
     super(props);
 
     this.state = {
-      //prevScrollpos: window.pageYOffset,      ##BUILD BREAK###
+      prevScrollpos: window.pageYOffset,
       visible: true
     };
 
@@ -61,7 +61,7 @@ export default class Example extends Component {
   handleScroll = () => {
     const { prevScrollpos } = this.state;
 
-    ///const currentScrollPos = window.pageYOffset; ### build break ###
+    const currentScrollPos = window.pageYOffset;
     const visible = prevScrollpos > currentScrollPos;
 
     this.setState({
@@ -72,7 +72,7 @@ export default class Example extends Component {
 
   render() {
     return (
-      <div id="head">
+      <div>
         <Navbar
           className={classnames("nav-bar", {
             "navbar--hidden": !this.state.visible
@@ -82,10 +82,10 @@ export default class Example extends Component {
           expand="md"
           fixed="top"
         >
-          <NavbarBrand href="/">Borderland Cyber Summit</NavbarBrand>
+          <NavbarBrand id='header' href="/">Borderland Cyber Summit</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav id='header-links'className="ml-auto" navbar>
               {links.map(createNavItem)}
             </Nav>
           </Collapse>
