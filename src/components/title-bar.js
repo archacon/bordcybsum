@@ -18,7 +18,7 @@ class TitleBar extends Component {
               className='btn btn-outline-danger btn-lg margin-right'
               href='#'
               role='button'
-              to='card-side side-front'
+              to='schedule'
               activeClass='active'
               smooth
             >
