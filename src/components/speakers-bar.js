@@ -59,7 +59,7 @@ export default () => (
     <CardDeck id='speakers' className='no-gutter'>
       {speakerList.map(speaker => {
         return (
-          <Col lg={{ size: 6 }} sm={{ size: '12' }}>
+          <Col lg={{ size: 6 }} sm={{ size: 12 }}>
             <SpeakerCard
               src={speaker.src}
               name={

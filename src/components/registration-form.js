@@ -41,7 +41,10 @@ const agreementQuestions = [
 const generateCheckboxes = ({ name, text }) => (
   <FormGroup check>
     <Row>
-      <Col md={{ size: 1 }} className='checkbox-col'>
+      <Col md={{ size: 10 }} className='checkbox-col order-md-3  mt-2'>
+        <Label>{text}</Label>
+      </Col>
+      <Col md={{ size: 1 }} className='checkbox-col order-md-2 mb-2'>
         <FormGroup check>
           <Label check>
             <Input type='radio' name={name} value='yes' />
@@ -49,16 +52,13 @@ const generateCheckboxes = ({ name, text }) => (
           </Label>
         </FormGroup>
       </Col>
-      <Col md={{ size: 1 }} className='checkbox-col'>
+      <Col md={{ size: 1 }} className='checkbox-col order-md-1 mb-2'>
         <FormGroup check>
           <Label check>
             <Input type='radio' name={name} value='no' />
             no
           </Label>
         </FormGroup>
-      </Col>
-      <Col md={{ size: 10 }} className='checkbox-col'>
-        <Label>{text}</Label>
       </Col>
     </Row>
   </FormGroup>
@@ -178,7 +178,7 @@ class RegistrationForm extends Component {
             </Label>
           </FormGroup>
         </FormGroup>
-        <h2>Contact Information Release & Model Release???</h2>
+        <h2>Contact Information Release & Model Release</h2>
         {agreementQuestions.map(generateCheckboxes)}
         <FormGroup>
           <Button type='submit' color='primary' className=''>
