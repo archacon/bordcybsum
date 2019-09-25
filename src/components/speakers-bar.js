@@ -52,11 +52,11 @@ const speakerList = [
 ]
 
 export default () => (
-  <Container>
+  <Container id='speakers' className='col-md-8 col-xs-11 shadow-lg mx-auto'>
     <h1 id='enticetitle' className='text-center'>
       Speakers
     </h1>
-    <CardDeck id='enticecontainer'>
+    <CardDeck id='speakers'>
       {speakerList.map(speaker => {
         return (
           <Col md='6' xs='12'>
@@ -77,7 +77,7 @@ export default () => (
         )
       })}
     </CardDeck>
-    <ListGroup id='speaker-schedule'>
+    <ListGroup id='speaker-schedule' style={{ maxWidth: '100%' }}>
       <ListGroupItem>
         <ListGroupItemHeading>Keynote Speaker: (10AM)</ListGroupItemHeading>
       </ListGroupItem>

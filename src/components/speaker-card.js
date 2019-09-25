@@ -11,7 +11,7 @@ import {
 export default props => {
   return (
     <div>
-      <Card className='speaker-card shadow-lg'>
+      <Card className='speaker-card mx-auto shadow-lg'>
         {props.src ? (
           <CardImg top width='100%' src={props.src} alt='Card image cap' />
         ) : (
