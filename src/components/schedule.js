@@ -4,7 +4,7 @@ import { Table } from 'reactstrap'
 class schedule extends Component {
   render () {
     return (
-      <Table hover>
+      <Table id='schedule' hover>
         <thead>
           <tr>
             <th>Start Time</th>
