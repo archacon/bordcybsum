@@ -35,7 +35,7 @@ export default class Example extends Component {
     super(props);
 
     this.state = {
-      prevScrollpos: window.pageYOffset,
+      //prevScrollpos: window.pageYOffset,      ##BUILD BREAK###
       visible: true
     };
 
@@ -61,7 +61,7 @@ export default class Example extends Component {
   handleScroll = () => {
     const { prevScrollpos } = this.state;
 
-    const currentScrollPos = window.pageYOffset;
+    ///const currentScrollPos = window.pageYOffset; ### build break ###
     const visible = prevScrollpos > currentScrollPos;
 
     this.setState({
