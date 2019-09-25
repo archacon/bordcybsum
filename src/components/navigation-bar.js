@@ -62,12 +62,12 @@ export default class Example extends Component {
     const { prevScrollpos } = this.state;
 
     ///const currentScrollPos = window.pageYOffset; ### build break ###
-    const visible = prevScrollpos > currentScrollPos;
+    //const visible = prevScrollpos > currentScrollPos;
 
-    this.setState({
-      prevScrollpos: currentScrollPos,
-      visible
-    });
+    // this.setState({
+    //   prevScrollpos: currentScrollPos,
+    //   visible
+    // });
   };
 
   render() {

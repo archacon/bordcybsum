@@ -629,10 +629,6 @@ form {
   border-radius: 1em;
 }
 
-div + div {
-  margin-top: 1em;
-}
-
 label span {
   display: inline-block;
   width: 120px;
@@ -719,9 +715,6 @@ ul.nav-bar li a {
 #speaker-schedule li h5 {
   margin: 0;
 }
-div + div {
-  margin-top: 1em;
-}
 
 label span {
   display: inline-block;
@@ -777,6 +770,10 @@ label em {
 
 .checkbox-col + .checkbox-col {
   margin-top: 0;
+}
+
+.container {
+  margin-top: 5em;
 }
 
 /****************MODAL*********************/

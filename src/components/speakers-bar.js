@@ -6,9 +6,7 @@ import {
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
-  Card,
-  CardTitle,
-  CardText
+  CardDeck
 } from 'reactstrap'
 import faker from 'faker'
 import SpeakerCard from './speaker-card'
@@ -16,70 +14,52 @@ import SpeakerCard from './speaker-card'
 // replace fake data with graphql info
 const speakerList = [
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
+    src: '',
+    firstName: 'Shawn',
     middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    lastName: 'Ollis',
+    company: 'Prudential Financial',
+    title: 'VP of Operations',
+    blurb: ''
   },
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
+    src: '',
+    firstName: 'Kira',
     middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    lastName: 'Shuman',
+    company: 'United States Department of Defense',
+    title: 'Cybersecurity Division Chief',
+    blurb: ''
   },
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
+    src: '',
+    firstName: 'Ernesto',
     middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    lastName: 'Arriola',
+    company: 'City of El Paso',
+    title: 'Information Security Asurance Manager',
+    blurb: ''
   },
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
-    middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
-  },
-  {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
-    middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
-  },
-  {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
-    middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    src: '',
+    firstName: 'Jesus',
+    middleInitial: 'Antonio',
+    lastName: 'Flores',
+    company: 'El Paso Independent School District',
+    title: 'Director of Technology',
+    blurb: ''
   }
 ]
 
 export default () => (
   <Container>
-    <h2 id='enticetitle' className='text-center'>
+    <h1 id='enticetitle' className='text-center'>
       Speakers
-    </h2>
-    <Row id='enticecontainer'>
+    </h1>
+    <CardDeck id='enticecontainer'>
       {speakerList.map(speaker => {
         return (
-          <Col xs='4'>
+          <Col md='6' xs='12'>
             <SpeakerCard
               src={speaker.src}
               name={
@@ -96,7 +76,7 @@ export default () => (
           </Col>
         )
       })}
-    </Row>
+    </CardDeck>
     <ListGroup id='speaker-schedule'>
       <ListGroupItem>
         <ListGroupItemHeading>Keynote Speaker: (10AM)</ListGroupItemHeading>
