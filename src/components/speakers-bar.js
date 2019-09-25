@@ -82,7 +82,7 @@ export default () => (
         <ListGroupItemHeading>Keynote Speaker: (10AM)</ListGroupItemHeading>
       </ListGroupItem>
       <ListGroupItem>
-        • Shawn OlListGroupItems - VP of Operations Prudential Financial
+        • Shawn Ollis - VP of Operations Prudential Financial
       </ListGroupItem>
       <ListGroupItem>
         <ListGroupItemHeading>
@@ -102,13 +102,11 @@ export default () => (
         School District
       </ListGroupItem>
       <ListGroupItem>
-        <ListGroupItemHeading>
-          Current ListGroupItemst of Sponsors:
-        </ListGroupItemHeading>
+        <ListGroupItemHeading>Current List of Sponsors:</ListGroupItemHeading>
       </ListGroupItem>
       <ListGroupItem>• El Paso Community College</ListGroupItem>
       <ListGroupItem>• Prudential Financial</ListGroupItem>
-      <ListGroupItem>• LastListGroupItemne.com</ListGroupItem>
+      <ListGroupItem>• LastLine.com</ListGroupItem>
       <ListGroupItem>
         <ListGroupItemHeading>
           After Summit Networking Event: (2PM-5PM)
