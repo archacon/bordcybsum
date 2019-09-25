@@ -1,189 +1,174 @@
 import React, { Component } from 'react'
-import { Col, Button, Form, FormGroup, Label, Input } from 'reactstrap'
+import {
+  Col,
+  Row,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Container
+} from 'reactstrap'
 
+const agreementQuestions = [
+  {
+    name: 'q1',
+    text:
+      'I agree to the contact information and model release of my name and photographic likeness to West Texas Cybersecurity and Information Assurance Society of the event for the its future and legal multimedia activities'
+  },
+  {
+    name: 'q2',
+    text:
+      'Would you like to receive an attendance certification for CEU or CPE?'
+  },
+  {
+    name: 'q3',
+    text:
+      'Would you like to become a member of West Texas Cybersecurity and Information Assurance Society’s nonprofit organization?'
+  },
+  {
+    name: 'q4',
+    text:
+      'Would you like to donate to West Texas Cybersecurity and Information Assurance Society’s Community Outreach programs? (All donations are tax deductible)'
+  },
+  {
+    name: 'q5',
+    text:
+      'Would you like to be a future event sponsor? (Monthly meetings, future conferences, outreach programs, and summits)'
+  }
+]
 
-//Original form by Adrian
+const generateCheckboxes = ({ name, text }) => (
+  <FormGroup check>
+    <Row>
+      <Col md={{ size: 1 }} className='checkbox-col'>
+        <FormGroup check>
+          <Label check>
+            <Input type='radio' name={name} />
+            yes
+          </Label>
+        </FormGroup>
+      </Col>
+      <Col md={{ size: 1 }} className='checkbox-col'>
+        <FormGroup check>
+          <Label check>
+            <Input type='radio' name={name} />
+            no
+          </Label>
+        </FormGroup>
+      </Col>
+      <Col md={{ size: 10 }} className='checkbox-col'>
+        <Label>{text}</Label>
+      </Col>
+    </Row>
+  </FormGroup>
+)
 
-/* class RegistrationForm extends Component {
+class RegistrationForm extends Component {
   render () {
     return (
-      <div className='col-12'>
-        <Form id='registrationform' className='' action='' method='POST'>
-          <FormGroup row>
-            <Label for='firstName' sm={{ size: 2, offset: 2 }}>
-              Name
+      <Form id='registrationform' className='' action='' method='POST'>
+        {this.props.children}
+        <h1>BORDERLAND CYBER SECURITY SUMMIT 2019</h1>
+        <h1>REGISTRATION FORM</h1>
+
+        <h3>Personal Information</h3>
+        <FormGroup>
+          <Label for='firstName'>Name</Label>
+          <Input
+            type='text'
+            name='firstName'
+            id='firstName'
+            placeholder='First'
+          />
+          <Input type='text' name='lastName' id='lastName' placeholder='Last' />
+        </FormGroup>
+        <FormGroup>
+          <Label for='exampleEmail'>Email Address:</Label>
+          <Input
+            type='email'
+            name='email'
+            id='exampleEmail'
+            placeholder='example@domain.com'
+          />
+        </FormGroup>
+        <FormGroup>
+          <Label for='phoneNumber'>Cell Phone:</Label>
+          <Input type='tel' name='phoneNumber' id='phoneNumber' />
+        </FormGroup>
+        <h2>Badge Information</h2>
+        <FormGroup>
+          <Label for='badgeName'>BadgeName</Label>
+          <Input type='text' name='badgeName' id='badgeName' />
+        </FormGroup>
+        <FormGroup>
+          <Label for='company'>Company/School/Organization Name:</Label>
+          <Input type='text' name='company' id='company' />
+        </FormGroup>
+        <FormGroup>
+          <Label for='jobTitle'>Job Title:</Label>
+          <Input type='text' name='jobTitle' id='jobTitle' />
+        </FormGroup>
+        <h2>How did you hear about this event?</h2>
+        <FormGroup tag='fieldset'>
+          <legend className='col-form-label col-sm-2' />
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Email advertising
             </Label>
-            <Col sm={3}>
-              <Input
-                type='text'
-                name='firstName'
-                id='firstName'
-                placeholder='First'
-              />
-            </Col>
-            <Col sm={3}>
-              <Input
-                type='text'
-                name='lastName'
-                id='lastName'
-                placeholder='Last'
-              />
-            </Col>
           </FormGroup>
-          <FormGroup row>
-            <Label for='exampleEmail' sm={{ size: 2, offset: 2 }}>
-              Email
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Another event or trade show
             </Label>
-            <Col sm={6}>
-              <Input
-                type='email'
-                name='email'
-                id='exampleEmail'
-                placeholder='example@domain.com'
-              />
-            </Col>
           </FormGroup>
-          <FormGroup row>
-            <Label for='phoneNumber' sm={{ size: 2, offset: 2 }}>
-              Phone Number
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Social media
             </Label>
-            <Col sm={6}>
-              <Input type='tel' name='phoneNumber' id='phoneNumber' />
-            </Col>
           </FormGroup>
-          <FormGroup>
-            <Button type='submit' color='primary' className='offset-sm-2'>
-              Submit
-            </Button>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Word of mouth
+            </Label>
           </FormGroup>
-        </Form>
-      </div>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />I was invited by a speaker
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />I am participating as a speaker
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Event website
+            </Label>
+          </FormGroup>
+          <FormGroup check>
+            <Label check>
+              <Input type='radio' name='radio' />
+              Other
+            </Label>
+          </FormGroup>
+        </FormGroup>
+        <h2>Contact Information Release & Model Release???</h2>
+        {agreementQuestions.map(generateCheckboxes)}
+        <FormGroup>
+          <Button type='submit' color='primary' className=''>
+            Submit
+          </Button>
+        </FormGroup>
+      </Form>
     )
   }
 }
-
-export default RegistrationForm
-*/
-
-//Flip card form by Eddy
-const cardContainer = RegistrationForm;
-
-// React component for form inputs
-class CardInput extends Component {
-  render() {
-    return(
-      <fieldset>
-        <input name={this.props.name} id={this.props.id} type={this.props.type || 'text'} placeholder={this.props.placeholder} required />
-      </fieldset>
-    )
-  }
-}
-// React component for textarea
-class CardTextarea extends Component {
-  render() {
-    return(
-      <fieldset>
-        <textarea name={this.props.name} id={this.props.id} placeholder={this.props.placeholder} required ></textarea>
-      </fieldset>
-    )
-  }
-}
-
-// React component for form button
-class CardBtn extends Component {
-  render() {
-    return(
-      <fieldset>
-        <button className={this.props.className} type={this.props.type} value={this.props.value}>{this.props.value}</button>
-      </fieldset>
-    )
-  }
-}
-
-// React component for the front side of the card
-class CardFront extends Component {
-  render() {
-    return(
-      <div className='card-side side-front'>
-        <div className='container-fluid'>
-          <div className='row'>
-            <div className='col-xs-6'>
-
-            </div>
-
-            <div className='col-xs-6 side-front-content' id='card-front-image'>
-              <h1>Borderland Cyber Summit 2019</h1>
-
-              <h2>El Paso, TX</h2>
-
-              <p>EPCC Admin Services Center</p>
-
-              <p>Blah Blah Blah</p>
-
-              <p>More Blah Blah Blah</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    )
-  }
-}
-
-// React component for the back side of the card
-class CardBack extends Component {
-  render() {
-    return(
-      <div className='card-side side-back'>
-        <div className='container-fluid'>
-          <h1>Register here!</h1>
-
-          <form formAction='' className='card-form'>
-            <div className='row'>
-              <div className='col-xs-6'>
-                <CardInput name='contactFirstName' id='contactFirstName' type='text' placeholder='Your first name' />
-              </div>
-
-              <div className='col-xs-6'>
-                <CardInput name='contactLastName' id='contactLastName' type='text' placeholder='Your last name' />
-              </div>
-            </div>
-
-            <div className='row'>
-              <div className='col-xs-6'>
-                <CardInput name='contactEmail' id='contactEmail' type='email' placeholder='Your email address' />
-              </div>
-
-              <div className='col-xs-6'>
-                <CardInput name='contactNumber' id='contactNumber' type='text' placeholder='Your phone number' />
-              </div>
-            </div>
-
-            <CardTextarea name='contactMessage' id='contactMessage' placeholder='Your message' />
-
-            <CardBtn className='btn btn-danger' type='submit' value='Send message' />
-          </form>
-
-
-        </div>
-      </div>
-    )
-  }
-}
-
-// React component for the card (main component)
-class RegistrationForm extends Component {
-  render() {
-    return(
-      <div className='card-container'>
-        <div className='card-body'>
-          <CardBack />
-
-          <CardFront />
-        </div>
-      </div>
-    )
-  }
-}
-
 
 export default RegistrationForm
