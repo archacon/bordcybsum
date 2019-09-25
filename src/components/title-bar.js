@@ -10,7 +10,7 @@ class TitleBar extends Component {
         <div class='container'>
           <h1 class='display-2'>Border land Cyber Summit 2019</h1>
           <p class='lead'>
-            October 26th - El Paso, TX <br />
+            November 23rd - El Paso, TX <br />
             EPCC Admin Services Center
           </p>
           <p>

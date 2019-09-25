@@ -333,7 +333,6 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -421,6 +420,7 @@ table {
   font-size: 1rem;
   line-height: 1.45rem;
   border-collapse: collapse;
+  background-color: #fff;
   width: 100%;
 }
 fieldset {
@@ -629,10 +629,6 @@ form {
   border-radius: 1em;
 }
 
-div + div {
-  margin-top: 1em;
-}
-
 label span {
   display: inline-block;
   width: 120px;
@@ -687,6 +683,11 @@ label em {
 
 /* begin custom code  */
 
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 #registrationform {
   font-size: 0.8vmax;
 }
@@ -712,16 +713,6 @@ ul.nav-bar li a {
   color: beige;
 }
 /******END NAVBAR********/
-
-#speaker-schedule li {
-  margin-left: 5%;
-}
-#speaker-schedule li h5 {
-  margin: 0;
-}
-div + div {
-  margin-top: 1em;
-}
 
 label span {
   display: inline-block;
@@ -777,6 +768,40 @@ label em {
 
 .checkbox-col + .checkbox-col {
   margin-top: 0;
+}
+
+.container {
+  margin-top: 5em;
+}
+
+.container {
+  padding: 16px;
+}
+.card + .card {
+  margin: 0 0 0 8px;
+}
+
+#speakers {
+  background-color: #fff;
+  margin: 2em 0 2em 0;
+  padding: 2em;
+}
+#speaker-schedule {
+  background-color: #fff;
+  margin: 2em 0 2em 0;
+  padding: 2em;
+}
+
+#speaker-schedule li {
+  padding-left: 5%;
+}
+#speaker-schedule li h5 {
+  padding-left: 0;
+}
+
+#event-details {
+  background-color: #fff;
+  margin: 2em 0 2em 0;
 }
 
 /****************MODAL*********************/

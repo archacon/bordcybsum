@@ -11,8 +11,12 @@ import {
 export default props => {
   return (
     <div>
-      <Card className='speaker-card'>
-        <CardImg top width='100%' src={props.src} alt='Card image cap' />
+      <Card className='speaker-card mx-3 my-1 shadow-lg'>
+        {props.src ? (
+          <CardImg top width='100%' src={props.src} alt='Card image cap' />
+        ) : (
+          ''
+        )}
         <CardBody>
           <CardTitle>
             <h3>{props.name}</h3>

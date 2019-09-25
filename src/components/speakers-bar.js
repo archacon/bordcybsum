@@ -6,9 +6,7 @@ import {
   ListGroup,
   ListGroupItem,
   ListGroupItemHeading,
-  Card,
-  CardTitle,
-  CardText
+  CardDeck
 } from 'reactstrap'
 import faker from 'faker'
 import SpeakerCard from './speaker-card'
@@ -16,70 +14,52 @@ import SpeakerCard from './speaker-card'
 // replace fake data with graphql info
 const speakerList = [
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
+    src: '',
+    firstName: 'Shawn',
     middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    lastName: 'Ollis',
+    company: 'Prudential Financial',
+    title: 'VP of Operations',
+    blurb: ''
   },
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
+    src: '',
+    firstName: 'Kira',
     middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    lastName: 'Shuman',
+    company: 'United States Department of Defense',
+    title: 'Cybersecurity Division Chief',
+    blurb: ''
   },
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
+    src: '',
+    firstName: 'Ernesto',
     middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    lastName: 'Arriola',
+    company: 'City of El Paso',
+    title: 'Information Security Asurance Manager',
+    blurb: ''
   },
   {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
-    middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
-  },
-  {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
-    middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
-  },
-  {
-    src: faker.image.avatar(),
-    firstName: faker.name.firstName(),
-    middleInitial: '',
-    lastName: faker.name.lastName(),
-    company: faker.company.companyName(),
-    title: faker.name.title(),
-    blurb: faker.lorem.sentences()
+    src: '',
+    firstName: 'Jesus',
+    middleInitial: 'Antonio',
+    lastName: 'Flores',
+    company: 'El Paso Independent School District',
+    title: 'Director of Technology',
+    blurb: ''
   }
 ]
 
 export default () => (
-  <Container>
-    <h2 id='enticetitle' className='text-center'>
+  <Container id='speakers' className='col-md-8 col-xs-11 shadow-lg mx-auto'>
+    <h1 id='enticetitle' className='text-center'>
       Speakers
-    </h2>
-    <Row id='enticecontainer'>
+    </h1>
+    <CardDeck id='speakers' className='no-gutter'>
       {speakerList.map(speaker => {
         return (
-          <Col xs='4'>
+          <Col lg={{ size: 6 }} sm={{ size: '12' }}>
             <SpeakerCard
               src={speaker.src}
               name={
@@ -96,14 +76,13 @@ export default () => (
           </Col>
         )
       })}
-    </Row>
-    <Row>
-    <ListGroup id='speaker-schedule'>
+    </CardDeck>
+    <ListGroup id='speaker-schedule' style={{ maxWidth: '100%' }}>
       <ListGroupItem>
         <ListGroupItemHeading>Keynote Speaker: (10AM)</ListGroupItemHeading>
       </ListGroupItem>
       <ListGroupItem>
-        • Shawn OlListGroupItems - VP of Operations Prudential Financial
+        • Shawn Ollis - VP of Operations Prudential Financial
       </ListGroupItem>
       <ListGroupItem>
         <ListGroupItemHeading>
@@ -123,13 +102,11 @@ export default () => (
         School District
       </ListGroupItem>
       <ListGroupItem>
-        <ListGroupItemHeading>
-          Current ListGroupItemst of Sponsors:
-        </ListGroupItemHeading>
+        <ListGroupItemHeading>Current List of Sponsors:</ListGroupItemHeading>
       </ListGroupItem>
       <ListGroupItem>• El Paso Community College</ListGroupItem>
       <ListGroupItem>• Prudential Financial</ListGroupItem>
-      <ListGroupItem>• LastListGroupItemne.com</ListGroupItem>
+      <ListGroupItem>• LastLine.com</ListGroupItem>
       <ListGroupItem>
         <ListGroupItemHeading>
           After Summit Networking Event: (2PM-5PM)
