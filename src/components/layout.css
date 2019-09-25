@@ -333,7 +333,6 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -421,6 +420,7 @@ table {
   font-size: 1rem;
   line-height: 1.45rem;
   border-collapse: collapse;
+  background-color: #fff;
   width: 100%;
 }
 fieldset {
@@ -710,10 +710,10 @@ ul.nav-bar li a {
 /******END NAVBAR********/
 
 #speaker-schedule li {
-  margin-left: 5%;
+  padding-left: 5%;
 }
 #speaker-schedule li h5 {
-  margin: 0;
+  padding-left: 0;
 }
 
 label span {
