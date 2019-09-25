@@ -44,7 +44,7 @@ const generateCheckboxes = ({ name, text }) => (
       <Col md={{ size: 1 }} className='checkbox-col'>
         <FormGroup check>
           <Label check>
-            <Input type='radio' name={name} />
+            <Input type='radio' name={name} value='yes' />
             yes
           </Label>
         </FormGroup>
@@ -52,7 +52,7 @@ const generateCheckboxes = ({ name, text }) => (
       <Col md={{ size: 1 }} className='checkbox-col'>
         <FormGroup check>
           <Label check>
-            <Input type='radio' name={name} />
+            <Input type='radio' name={name} value='no' />
             no
           </Label>
         </FormGroup>
@@ -67,7 +67,12 @@ const generateCheckboxes = ({ name, text }) => (
 class RegistrationForm extends Component {
   render () {
     return (
-      <Form id='registrationform' className='' action='' method='POST'>
+      <Form
+        id='registrationform'
+        className=''
+        action='https://formspree.io/admin@wtxinfosec.org'
+        method='POST'
+      >
         {this.props.children}
         <h1>BORDERLAND CYBER SECURITY SUMMIT 2019</h1>
         <h1>REGISTRATION FORM</h1>
@@ -114,47 +119,61 @@ class RegistrationForm extends Component {
           <legend className='col-form-label col-sm-2' />
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />
+              <Input type='radio' name='radio' value='Email Advertising' />
               Email advertising
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />
+              <Input
+                type='radio'
+                name='radio'
+                value='Another event or trade show'
+              />
               Another event or trade show
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />
+              <Input type='radio' name='radio' value='social media' />
               Social media
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />
+              <Input type='radio' name='radio' value='word of mouth' />
               Word of mouth
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />I was invited by a speaker
+              <Input
+                type='radio'
+                name='radio'
+                value='I was invited by a speaker'
+              />
+              I was invited by a speaker
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />I am participating as a speaker
+              <Input
+                type='radio'
+                name='radio'
+                value='I am participating as a speaker'
+              />
+              I am participating as a speaker
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />
+              <Input type='radio' name='radio' value='Event website' />
               Event website
             </Label>
           </FormGroup>
           <FormGroup check>
             <Label check>
-              <Input type='radio' name='radio' />
+              <Input type='radio' name='radio' value='other' />
               Other
             </Label>
           </FormGroup>

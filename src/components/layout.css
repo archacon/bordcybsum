@@ -776,6 +776,13 @@ label em {
   margin-top: 5em;
 }
 
+.container {
+  padding: 16px;
+}
+.card + .card {
+  margin: 0 0 0 8px;
+}
+
 /****************MODAL*********************/
 .ReactModal__Overlay {
   opacity: 0;
