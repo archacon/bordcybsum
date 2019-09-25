@@ -683,6 +683,11 @@ label em {
 
 /* begin custom code  */
 
+.no-gutter > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
 #registrationform {
   font-size: 0.8vmax;
 }
