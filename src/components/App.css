@@ -20,6 +20,16 @@ src: url('../fonts/retro_computer.ttf') format('truetype');
     font-size: 120%;
   }
 }
+@media screen and (max-width: 450px) {
+  #schedule {
+    font-size: 1vh;
+  }
+}
+@media screen and (min-width: 451px) {
+  #schedule {
+    font-size: 100%;
+  }
+}
 
 
 /*                             #### Header ####                              */
