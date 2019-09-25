@@ -21,7 +21,13 @@ import RegistrationForm from '../components/registration-form'
 
 const IndexPage = () => (
   <Layout my={5}>
-    <FormModal />
+    <Header />
+    <TitleBar />
+    {/* <ParallaxBar index={0} /> */}
+    <SpeakersBar />
+    <EventDetailsBar />
+    <AboutUs />
+    <div style={{ marginBottom: '5em' }} />
   </Layout>
 )
 
