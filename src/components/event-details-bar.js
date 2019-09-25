@@ -9,9 +9,17 @@ import RegistrationForm from './registration-form'
 class EventDetailsBar extends Component {
   render () {
     return (
-      <div className='col-8 mx-auto'>
-        <Row />
-        <Schedule />
+      <div
+        id='event-details'
+        xs={12}
+        md={8}
+        className='col-md-8 col-sm-11 mx-auto shadow-lg'
+      >
+        <Row>
+          <Col>
+            <Schedule />
+          </Col>
+        </Row>
         <Row>
           <Col>
             <FormModal />
