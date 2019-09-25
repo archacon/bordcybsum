@@ -56,10 +56,10 @@ export default () => (
     <h1 id='enticetitle' className='text-center'>
       Speakers
     </h1>
-    <CardDeck id='speakers'>
+    <CardDeck id='speakers' className='no-gutter'>
       {speakerList.map(speaker => {
         return (
-          <Col md='6' xs='12'>
+          <Col lg={{ size: 6 }} sm={{ size: '12' }}>
             <SpeakerCard
               src={speaker.src}
               name={
