@@ -14,11 +14,11 @@ import { Link, Scroll } from "react-scroll";
 // <NavLink tag={Link} to="/somewhere">
 
 const links = [
-  { text: "Home", to: "top-of-page" },
-  { text: "Speakers", to: "speaker-card" },
-  { text: "Event Details", to: "schedule" },
-  { text: "Register", to: "aboutus" },
-  { text: "Sponsors", to: "aboutus" },
+  { text: "Home", to: "head" },
+  { text: "Speakers", to: "enticetitle" },
+  { text: "Event Details", to: "formtitle" },
+  { text: "Register", to: "formtitle" },
+  { text: "Sponsors" },
   { text: "About Us", to: "aboutus" }
 ];
 
@@ -35,7 +35,7 @@ export default class Example extends Component {
     super(props);
 
     this.state = {
-      prevScrollpos: window.pageYOffset,
+      //prevScrollpos: window.pageYOffset,      ##BUILD BREAK###
       visible: true
     };
 
@@ -61,18 +61,18 @@ export default class Example extends Component {
   handleScroll = () => {
     const { prevScrollpos } = this.state;
 
-    const currentScrollPos = window.pageYOffset;
-    const visible = prevScrollpos > currentScrollPos;
+    ///const currentScrollPos = window.pageYOffset; ### build break ###
+    //const visible = prevScrollpos > currentScrollPos;
 
-    this.setState({
-      prevScrollpos: currentScrollPos,
-      visible
-    });
+    // this.setState({
+    //   prevScrollpos: currentScrollPos,
+    //   visible
+    // });
   };
 
   render() {
     return (
-      <div id='top-of-page'>
+      <div id="head">
         <Navbar
           className={classnames("nav-bar", {
             "navbar--hidden": !this.state.visible
@@ -82,10 +82,10 @@ export default class Example extends Component {
           expand="md"
           fixed="top"
         >
-          <NavbarBrand id='header' href="/">Borderland Cyber Summit</NavbarBrand>
+          <NavbarBrand href="/">Borderland Cyber Summit</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav id='header-links'className="ml-auto" navbar>
+            <Nav className="ml-auto" navbar>
               {links.map(createNavItem)}
             </Nav>
           </Collapse>

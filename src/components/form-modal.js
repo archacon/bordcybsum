@@ -62,7 +62,6 @@ export default class FormModal extends React.Component {
         >
           <RegistrationForm>
             <button
-              id='bottom-button'
               style={{ float: 'right' }}
               onClick={this.closeModal}
               className='btn btn-default'

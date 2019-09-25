@@ -20,35 +20,22 @@ src: url('../fonts/retro_computer.ttf') format('truetype');
     font-size: 120%;
   }
 }
-@media screen and (max-width: 450px) {
-  #schedule {
-    font-size: 1vh;
-  }
-}
-@media screen and (min-width: 451px) {
-  #schedule {
-    font-size: 100%;
-  }
-}
-
-
-/*                             #### Header ####                              */
 .nav-bar{
   background: #141E30;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.8;
-  width: 100vw;
+  width: 100%;
   padding: 10px;
   position: fixed;
   top: 0;
   transition: top 0.6s;
-  height: 8%;
+  height: 12%;
 }
 .navbar--hidden {
-  top: -9%;
+  top: -13%;
 }
-#header {
+.navbar-brand{
   color: white !important;
   font-family: COMPUTER LOVE;
   font-style: normal;
@@ -57,36 +44,24 @@ src: url('../fonts/retro_computer.ttf') format('truetype');
   color: white !important;
   border-color: white !important;
 }
-#header-links {
-  color: white;
-}
-#header-links a {
-  font-size: 1.2vw;
-  padding-right: 30px;
+.nav-link a {;
   float: right;
   display: block;
   text-align: center;
   text-decoration: none;
+  font-size: 90%;
   border-bottom: 3px solid transparent;
   color: white;
-  text-transform: uppercase;
-  cursor: pointer;
+  font-weight: 400;
 }
-
-#header-links a:hover {
-    text-decoration: underline yellow;
-    cursor: pointer;
+.nav-link a:hover {
+  border-bottom: 2px solid yellow;
 }
-
 body {
   background: #ADA996;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
-/*                             #### Header ####                              */
-
-
-/*                           #### Jumbotron ####                             */
 .jumbotron{
   color: White;
   height: 700px;
@@ -95,6 +70,9 @@ body {
   background-size: cover;
   margin-top: -1.5rem;
   background-image: url('../images/el-paso-nightscape.jpg');
+}
+.margin-right{
+  margin-right:25px !important;
 }
 .display-2{
   font-size: 350%;
@@ -114,52 +92,172 @@ body {
   font-weight:100;
   margin-top:20px;
 }
-/*                            #### Jumbotron ####                            */
-
-
-/*                         #### Page Background ####                         */
-body {
-  background: #ADA996;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
-/*                         #### Page Background ####                         */
-
-
-/*                             #### Speakers ####                            */
-#speaker-schedule {
-  width: 100vw;
-  padding: 10%;
-  margin: auto;
-  text-align: center;
-}
-#schedule {
-  width: 100vw;
-  padding: 10%;
-  margin: auto;
-  text-align: center;
-}
-/*                             #### Speakers ####                             */
-
-
-/*                              #### Footer ####                              */
 .nav-footer{
   background: #141E30;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.8;
-  width: 100vw;
+  width: 100%;
   padding: 10px;
   position: fixed;
   bottom: 0;
   transition: bottom 0.6s;
   height: 8%;
 }
+.footer-brand{
+  width: 100%;
+  text-align: center;
+}
 .navfooter--hidden {
   bottom: -9%;
 }
-#footer {
-  color: white !important;
-  font-family: COMPUTER LOVE;
-  font-style: normal;
-}/*                             #### Footer ####                              */
+/*- Typograpy and resets -*/
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background-color: #fff;
+}
+h1, h2 {
+  margin-top: 0;
+}
+h1 {
+  margin-bottom: 16px;
+  font-size: 24px;
+  font-weight: 700;
+}
+h2 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 400;
+}
+/*- Card container -*/
+.card-container {
+  position: relative;
+  z-index: 1;
+  margin: 32px auto;
+  max-width: 720px;
+  height: 420px;
+  perspective: 1000px;
+}
+img {
+  background-image: url('../images/el-paso-nightscape.jpg');
+  max-width: 100%;
+  max-height: 100%;
+}
+/*- Card body -*/
+.card-body {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all .7s linear;
+}
+/*- Flipping the card -*/
+.card-container:hover .card-body {
+  transform: rotateY(180deg);
+}
+.card-container:hover > .card-body > .side-front {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in, visibility .75s linear;
+}
+/*- Card sides -*/
+.card-side {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  color: #212121;
+  background-color: #fff;
+  backface-visibility: hidden;
+  box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+}
+/*- Front side -*/
+.side-front [class^=col-xs]:first-of-type {
+  padding-left: 0;
+}
+.side-front-content {
+  padding-top: 32px;
+  padding-right: 32px;
+  padding-bottom: 32px;
+}
+/*- Back side -*/
+.side-back {
+  z-index: 2;
+  padding: 32px;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+/*- Form -*/
+.card-form {
+  margin-top: 32px;
+}
+.card-form .row + .row,
+.card-form .row + fieldset,
+.card-form fieldset + fieldset {
+  margin-top: 16px;
+}
+input,
+textarea {
+  padding: 8px;
+  width: 100%;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid #eee;
+  border-left: 0;
+
+  &:focus {
+    outline: 0;
+    border-bottom: 1px solid #0c81f6;
+  }
+}
+textarea {
+  max-height: 80px;
+  resize: vertical;
+}
+.btn-primary {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #0c81f6;
+  border: none;
+  box-shadow: 0 10px 35px rgba(50,50,93,.1),0 2px 15px rgba(0,0,0,.07);
+  transition: background-color .25s ease-in, box-shadow .25s ease-in;
+
+  &:focus,
+  &:hover {
+    background-color: lighten(#0c81f6, 15%);
+    box-shadow: 0 18px 35px rgba(50,50,93,.1),0 8px 15px rgba(0,0,0,.07);
+  }
+}
+/*- Social links -*/
+/.social-links {
+  padding: 0;
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+
+  li:nth-of-type(n+2) {
+    margin-left: 24px;
+  }
+  a {
+    color: #212121;
+    transition: opacity .25s ease-in;
+
+    &:focus,
+    &:hover {
+      opacity: .5;
+    }
+  }
+  i {
+    font-size: 24px;
+  }
+}
+#card-front-image {
+  background-image: url('../images/security_banner.jpg');
+  background-size: cover;
+  width: 100%;
+}

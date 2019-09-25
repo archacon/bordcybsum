@@ -115,6 +115,5 @@ export default () => (
       <ListGroupItem>• The Shack Wings and Brews</ListGroupItem>
       <ListGroupItem>9120 Viscount Blvd., El Paso, TX 79925</ListGroupItem>
     </ListGroup>
-    </Row>
   </Container>
 )
