@@ -14,11 +14,11 @@ import { Link, Scroll } from "react-scroll";
 // <NavLink tag={Link} to="/somewhere">
 
 const links = [
-  { text: "Home", to: "head" },
-  { text: "Speakers", to: "enticetitle" },
-  { text: "Event Details", to: "formtitle" },
-  { text: "Register", to: "formtitle" },
-  { text: "Sponsors" },
+  { text: "Home", to: "top-of-page" },
+  { text: "Speakers", to: "speaker-card" },
+  { text: "Event Details", to: "schedule" },
+  { text: "Register", to: "aboutus" },
+  { text: "Sponsors", to: "aboutus" },
   { text: "About Us", to: "aboutus" }
 ];
 
@@ -72,7 +72,7 @@ export default class Example extends Component {
 
   render() {
     return (
-      <div>
+      <div id='top-of-page'>
         <Navbar
           className={classnames("nav-bar", {
             "navbar--hidden": !this.state.visible
