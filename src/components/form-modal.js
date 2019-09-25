@@ -12,7 +12,7 @@ const customStyles = {
     bottom: 'auto',
     marginRight: '-20%',
     transform: 'translate(-50%, -50%)',
-    height: '500px', // <-- This sets the height,
+    height: '75vh', // <-- This sets the height,
     overlfow: 'scroll' // <-- This tells the modal to scrol
   }
 }

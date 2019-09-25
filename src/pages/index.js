@@ -23,7 +23,7 @@ const IndexPage = () => (
   <Layout my={5}>
     <Header />
     <TitleBar />
-    <ParallaxBar index={0} />
+    {/* <ParallaxBar index={0} /> */}
     <SpeakersBar />
     <EventDetailsBar />
     <AboutUs />

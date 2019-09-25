@@ -688,10 +688,10 @@ label em {
 /* begin custom code  */
 
 #registrationform {
-  font-size: 0.8vw;
+  font-size: 0.8vmax;
 }
 #registrationform h1 {
-  font-size: 2vw;
+  font-size: 2vmax;
   text-align: center;
 }
 #registrationform h2 {
@@ -707,6 +707,18 @@ form {
   border-radius: 1em;
 }
 
+/********NAVBAR**********/
+ul.nav-bar li a {
+  color: beige;
+}
+/******END NAVBAR********/
+
+#speaker-schedule li {
+  margin-left: 5%;
+}
+#speaker-schedule li h5 {
+  margin: 0;
+}
 div + div {
   margin-top: 1em;
 }
