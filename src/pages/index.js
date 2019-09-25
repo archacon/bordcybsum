@@ -13,14 +13,17 @@ import SpeakersBar from '../components/speakers-bar'
 import Header from '../components/header'
 import SiteFooter from '../components/site-footer'
 import ParallaxBar from '../components/parallax-bar'
+import FormModal from '../components/form-modal'
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import '../components/App.css'
+
+import RegistrationForm from '../components/registration-form'
 
 const IndexPage = () => (
   <Layout my={5}>
     <Header />
     <TitleBar />
-    <ParallaxBar index={0} />
+    {/* <ParallaxBar index={0} /> */}
     <SpeakersBar />
     <EventDetailsBar />
     <AboutUs />
