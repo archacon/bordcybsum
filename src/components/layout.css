@@ -621,14 +621,6 @@ pre tt:after {
   }
 }
 
-form {
-  margin: 0 auto;
-  width: 400px;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
-}
-
 label span {
   display: inline-block;
   width: 120px;
@@ -689,23 +681,13 @@ label em {
 }
 
 #registrationform {
-  font-size: 0.8vmax;
+  text-align: left;
 }
 #registrationform h1 {
-  font-size: 2vmax;
   text-align: center;
 }
 #registrationform h2 {
-  font-size: 1vw;
   font-weight: bold;
-}
-
-form {
-  margin: 0 auto;
-  width: 80%;
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
 }
 
 /********NAVBAR**********/
