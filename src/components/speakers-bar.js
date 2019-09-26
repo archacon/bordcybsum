@@ -102,7 +102,9 @@ export default () => (
         School District
       </ListGroupItem>
       <ListGroupItem>
-        <ListGroupItemHeading>Current List of Sponsors:</ListGroupItemHeading>
+        <ListGroupItemHeading id='sponsors'>
+          Current List of Sponsors:
+        </ListGroupItemHeading>
       </ListGroupItem>
       <ListGroupItem>• El Paso Community College</ListGroupItem>
       <ListGroupItem>• Prudential Financial</ListGroupItem>
@@ -115,6 +117,5 @@ export default () => (
       <ListGroupItem>• The Shack Wings and Brews</ListGroupItem>
       <ListGroupItem>9120 Viscount Blvd., El Paso, TX 79925</ListGroupItem>
     </ListGroup>
-    </Row>
   </Container>
 )

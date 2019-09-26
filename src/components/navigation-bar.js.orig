@@ -1,0 +1,104 @@
+import React, { Component } from "react";
+import classnames from "classnames";
+import {
+  Collapse,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink
+} from "reactstrap";
+import { Link, Scroll } from "react-scroll";
+
+// <NavLink tag={Link} to="/somewhere">
+
+const links = [
+<<<<<<< HEAD
+  { text: "Home", to: "head" },
+  { text: "Speakers", to: "enticetitle" },
+  { text: "Event Details", to: "formtitle" },
+  { text: "Register", to: "formtitle" },
+  { text: "Sponsors", to: "#" },
+=======
+  { text: "Home", to: "top-of-page" },
+  { text: "Speakers", to: "speaker-card" },
+  { text: "Event Details", to: "schedule" },
+  { text: "Register", to: "aboutus" },
+  { text: "Sponsors", to: "aboutus" },
+>>>>>>> 789625e4689ab91b68a339dcb45431fc92e98fa5
+  { text: "About Us", to: "aboutus" }
+];
+
+const createNavItem = ({ text, to }) => (
+  <NavItem>
+    <Link to={to} activeClass="active" smooth={true} offset={-27}>
+      {text}
+    </Link>
+  </NavItem>
+);
+
+export default class Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      prevScrollpos: window.pageYOffset,
+      visible: true
+    };
+
+    this.toggle = this.toggle.bind(this);
+  }
+
+  toggle() {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+  //Scrolling Navbar hide effect
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  // Remove the event listener when the component is unmount.
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  // Hide or show the menu.
+  handleScroll = () => {
+    const { prevScrollpos } = this.state;
+
+    const currentScrollPos = window.pageYOffset;
+    const visible = prevScrollpos > currentScrollPos;
+
+    this.setState({
+      prevScrollpos: currentScrollPos,
+      visible
+    });
+  };
+
+  render() {
+    return (
+      <div id='top-of-page'>
+        <Navbar
+          className={classnames("nav-bar", {
+            "navbar--hidden": !this.state.visible
+          })}
+          color="light"
+          light
+          expand="md"
+          fixed="top"
+        >
+          <NavbarBrand id='header' href="/">Borderland Cyber Summit</NavbarBrand>
+          <NavbarToggler onClick={this.toggle} />
+          <Collapse isOpen={this.state.isOpen} navbar>
+            <Nav id='header-links'className="ml-auto" navbar>
+              {links.map(createNavItem)}
+            </Nav>
+          </Collapse>
+        </Navbar>
+      </div>
+    );
+  }
+}

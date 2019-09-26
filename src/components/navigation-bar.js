@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import classnames from "classnames";
+import React, { Component } from 'react'
+import classnames from 'classnames'
 import {
   Collapse,
   Navbar,
@@ -8,89 +8,65 @@ import {
   Nav,
   NavItem,
   NavLink
-} from "reactstrap";
-import { Link, Scroll } from "react-scroll";
+} from 'reactstrap'
+import { Link, animateScroll as scroll } from 'react-scroll'
 
 // <NavLink tag={Link} to="/somewhere">
 
 const links = [
-  { text: "Home", to: "head" },
-  { text: "Speakers", to: "enticetitle" },
-  { text: "Event Details", to: "formtitle" },
-  { text: "Register", to: "formtitle" },
-  { text: "Sponsors", to: "#" },
-  { text: "About Us", to: "aboutus" }
-];
+  { text: 'Home', to: 'head' },
+  { text: 'Speakers', to: 'enticetitle' },
+  { text: 'Event Details', to: 'event-details' },
+  { text: 'Register', to: 'event-details' },
+  { text: 'Sponsors', to: 'sponsors' }
+]
 
 const createNavItem = ({ text, to }) => (
   <NavItem>
-    <Link to={to} activeClass="active" smooth={true} offset={-27}>
+    <Link className='nav-link' to={to} activeClass='active' smooth offset={-27}>
       {text}
     </Link>
   </NavItem>
-);
+)
 
 export default class Example extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
 
     this.state = {
-      //prevScrollpos: window.pageYOffset,      ##BUILD BREAK###
-      visible: true
-    };
+      visible: true,
+      isOpen: false
+    }
 
-    this.toggle = this.toggle.bind(this);
+    this.toggle = this.toggle.bind(this)
   }
 
-  toggle() {
+  toggle () {
     this.setState({
       isOpen: !this.state.isOpen
-    });
-  }
-  //Scrolling Navbar hide effect
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
+    })
   }
 
-  // Remove the event listener when the component is unmount.
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  // Hide or show the menu.
-  handleScroll = () => {
-    const { prevScrollpos } = this.state;
-
-    ///const currentScrollPos = window.pageYOffset; ### build break ###
-    //const visible = prevScrollpos > currentScrollPos;
-
-    // this.setState({
-    //   prevScrollpos: currentScrollPos,
-    //   visible
-    // });
-  };
-
-  render() {
+  render () {
     return (
-      <div id="head">
+      <div id='navigation'>
         <Navbar
-          className={classnames("nav-bar", {
-            "navbar--hidden": !this.state.visible
+          className={classnames('nav-bar', 'navbar-inverse', 'bg-inverse', {
+            'navbar--hidden': !this.state.visible
           })}
-          color="light"
-          light
-          expand="md"
-          fixed="top"
+          dark
+          expand='md'
+          fixed='top'
         >
-          <NavbarBrand href="/">Borderland Cyber Summit</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
+          <NavbarBrand href='/'>Borderland Cyber Summit</NavbarBrand>
+          <NavbarToggler light onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
+            <Nav className='ml-auto' navbar>
               {links.map(createNavItem)}
             </Nav>
           </Collapse>
         </Navbar>
       </div>
-    );
+    )
   }
 }

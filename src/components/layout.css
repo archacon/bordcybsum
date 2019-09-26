@@ -691,9 +691,18 @@ label em {
 }
 
 /********NAVBAR**********/
-ul.nav-bar li a {
-  color: beige;
+#navigation {
+  color: white;
 }
+
+#navigation a {
+  color: white;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
 /******END NAVBAR********/
 
 label span {

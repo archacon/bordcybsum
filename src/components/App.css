@@ -1,14 +1,14 @@
 @font-face {
-font-family: 'MadHacker';
-src: url('../fonts/Mad Hacker.ttf') format('truetype');
+  font-family: "MadHacker";
+  src: url("../fonts/Mad Hacker.ttf") format("truetype");
 }
 @font-face {
-font-family: 'COMPUTER LOVE';
-src: url('../fonts/COMPUTER LOVE.ttf') format('truetype');
+  font-family: "COMPUTER LOVE";
+  src: url("../fonts/COMPUTER LOVE.ttf") format("truetype");
 }
 @font-face {
-font-family: 'retro_computer';
-src: url('../fonts/retro_computer.ttf') format('truetype');
+  font-family: "retro_computer";
+  src: url("../fonts/retro_computer.ttf") format("truetype");
 }
 @media screen and (min-width: 769px) {
   .navbar-brand {
@@ -31,19 +31,26 @@ src: url('../fonts/retro_computer.ttf') format('truetype');
   }
 }
 
-
 /*                             #### Header ####                              */
-.nav-bar{
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  opacity: 0.8;
+.nav-bar {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* opacity: 0.8;
   width: 100vw;
   padding: 10px;
   position: fixed;
   top: 0;
   transition: top 0.6s;
-  height: 8%;
+  height: 8%; */
 }
 .navbar--hidden {
   top: -9%;
@@ -53,7 +60,7 @@ src: url('../fonts/retro_computer.ttf') format('truetype');
   font-family: COMPUTER LOVE;
   font-style: normal;
 }
-.navbar-light .navbar-toggler{
+.navbar-light .navbar-toggler {
   color: white !important;
   border-color: white !important;
 }
@@ -74,57 +81,78 @@ src: url('../fonts/retro_computer.ttf') format('truetype');
 }
 
 #header-links a:hover {
-    text-decoration: underline yellow;
-    cursor: pointer;
+  text-decoration: underline yellow;
+  cursor: pointer;
 }
 
 body {
-  background: #ADA996;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ada996; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 /*                             #### Header ####                              */
 
-
 /*                           #### Jumbotron ####                             */
-.jumbotron{
+.jumbotron {
   color: White;
   height: 700px;
   display: flex;
   align-items: center;
   background-size: cover;
   margin-top: -1.5rem;
-  background-image: url('../images/el-paso-nightscape.jpg');
+  background-image: url("../images/el-paso-nightscape.jpg");
 }
-.display-2{
+.display-2 {
   font-size: 350%;
-  font-family:retro_computer;
-  font-weight:100;
-  margin-top:-10px;
+  font-family: retro_computer;
+  font-weight: 100;
+  margin-top: -10px;
 }
-.lead{
-  font-family:raleway;
-  font-weight:100;
-  margin-top:-10px;
+.lead {
+  font-family: raleway;
+  font-weight: 100;
+  margin-top: -10px;
 }
-.btn-outline-danger{
-  color:white;
-  border-color:white;
-  border-radius:0px;
-  font-weight:100;
-  margin-top:20px;
+.btn-outline-danger {
+  color: white;
+  border-color: white;
+  border-radius: 0px;
+  font-weight: 100;
+  margin-top: 20px;
 }
 /*                            #### Jumbotron ####                            */
 
-
 /*                         #### Page Background ####                         */
 body {
-  background: #ADA996;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #ada996; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #eaeaea,
+    #dbdbdb,
+    #f2f2f2,
+    #ada996
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 /*                         #### Page Background ####                         */
-
 
 /*                             #### Speakers ####                            */
 #speaker-schedule {
@@ -141,12 +169,19 @@ body {
 }
 /*                             #### Speakers ####                             */
 
-
 /*                              #### Footer ####                              */
-.nav-footer{
-  background: #141E30;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.nav-footer {
+  background: #141e30; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #243b55,
+    #141e30
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #243b55,
+    #141e30
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   opacity: 0.8;
   width: 100vw;
   padding: 10px;
@@ -162,4 +197,4 @@ body {
   color: white !important;
   font-family: COMPUTER LOVE;
   font-style: normal;
-}/*                             #### Footer ####                              */
+} /*                             #### Footer ####                              */
