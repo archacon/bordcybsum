@@ -18,11 +18,11 @@ const links = [
   { text: "Speakers", to: "enticetitle" },
   { text: "Event Details", to: "formtitle" },
   { text: "Register", to: "formtitle" },
-  { text: "Sponsors" },
+  { text: "Sponsors", to: "#" },
   { text: "About Us", to: "aboutus" }
 ];
 
-const createNavItem = ({ href, text, to, className }) => (
+const createNavItem = ({ text, to }) => (
   <NavItem>
     <Link to={to} activeClass="active" smooth={true} offset={-27}>
       {text}

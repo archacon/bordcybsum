@@ -13,33 +13,38 @@ import {
 const agreementQuestions = [
   {
     name: 'q1',
+    key: 'q1',
     text:
       'I agree to the contact information and model release of my name and photographic likeness to West Texas Cybersecurity and Information Assurance Society of the event for the its future and legal multimedia activities'
   },
   {
     name: 'q2',
+    key: 'q2',
     text:
       'Would you like to receive an attendance certification for CEU or CPE?'
   },
   {
     name: 'q3',
+    key: 'q3',
     text:
       'Would you like to become a member of West Texas Cybersecurity and Information Assurance Society’s nonprofit organization?'
   },
   {
     name: 'q4',
+    key: 'q4',
     text:
       'Would you like to donate to West Texas Cybersecurity and Information Assurance Society’s Community Outreach programs? (All donations are tax deductible)'
   },
   {
     name: 'q5',
+    key: 'q5',
     text:
       'Would you like to be a future event sponsor? (Monthly meetings, future conferences, outreach programs, and summits)'
   }
 ]
 
-const generateCheckboxes = ({ name, text }) => (
-  <FormGroup check>
+const generateCheckboxes = ({ name, key, text }) => (
+  <FormGroup check key={key}>
     <Row>
       <Col md={{ size: 10 }} className='checkbox-col order-md-3  mt-2'>
         <Label>{text}</Label>
