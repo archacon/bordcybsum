@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { Table } from 'reactstrap'
+import { Table, Row } from 'reactstrap'
 
 class schedule extends Component {
   render () {
     return (
-      <Table hover>
+      <Row>
+      <Table id='schedule' hover>
         <thead>
           <tr>
             <th>Start Time</th>
@@ -84,6 +85,7 @@ class schedule extends Component {
           </tr>
         </tbody>
       </Table>
+      </Row>
     )
   }
 }

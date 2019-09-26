@@ -21,26 +21,26 @@ class SiteFooter extends Component {
   }
   // Scrolling Navbar hide effect
   componentDidMount () {
-    // window.addEventListener("scroll", this.handleScroll);
+     window.addEventListener("scroll", this.handleScroll);
   }
 
   // Remove the event listener when the component is unmount.
   componentWillUnmount () {
-    // window.removeEventListener("scroll", this.handleScroll);
+     window.removeEventListener("scroll", this.handleScroll);
   }
 
   // Hide or show the menu.  #### CURRENTLY BREAKS BUILD ####
-  // handleScroll = () => {
-  //   const { prevScrollpos } = this.state;
+   handleScroll = () => {
+     const { prevScrollpos } = this.state;
 
-  //   const currentScrollPos = window.pageYOffset;
-  //   const visible = prevScrollpos > currentScrollPos;
+     const currentScrollPos = window.pageYOffset;
+     const visible = prevScrollpos > currentScrollPos;
 
-  //   this.setState({
-  //     prevScrollpos: currentScrollPos,
-  //     visible
-  //   });
-  // };
+     this.setState({
+       prevScrollpos: currentScrollPos,
+       visible
+     });
+   };
 
   render () {
     return (
@@ -55,7 +55,7 @@ class SiteFooter extends Component {
           fixed='bottom'
         >
           <Container>
-            <NavbarBrand>Footer</NavbarBrand>
+            <NavbarBrand id='footer'>Footer</NavbarBrand>
             <p style={{ color: 'white' }}>
               <i className='fa fa-linkedin-in' />
             </p>
